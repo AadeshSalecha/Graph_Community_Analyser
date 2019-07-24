@@ -103,7 +103,7 @@ def process_tweetID(tweet_id):
   igraph_louvain_implementation.NBC(cur_dir = global_dir, tweet_id = tweet_id, cluster = louvain, graph = igraph_G, l_spreaders = l_spreaders)
   subgraph_stats.B_C_degree_stats(tweet_id = tweet_id, cluster = louvain, graph = igraph_G)
   # spreader_role.sp_role(tweet_id, l_spreader)
-  bel_ranks.spread_edge_bel(tweet_id, id_dict, G, l_spreaders)
+  # bel_ranks.spread_edge_bel(tweet_id, id_dict, G, l_spreaders)
 
 def make_directory(dirname):
   if not os.path.exists(dirname):
