@@ -22,10 +22,7 @@ def main():
   global TSM_scores
 
   # Make ID Dict, Edges
-  # id_dict, edges = compute_id_dict_and_edges()
-
-  ##############CNAHGE THIS 
-  id_dict, edges = compute_id_dict_and_edges_from_ids_file()
+  id_dict, edges = compute_id_dict_and_edges()
 
   num_nodes = len(id_dict)
 
