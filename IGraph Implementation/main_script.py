@@ -81,7 +81,7 @@ def compute_l_spreaders():
 ########################################### 
 def compute_id_dict_and_edges():
   id_dict = {}
-  edges = []
+  edges = set()
   
   count = 0
   for folder in [tweetID + '/Followers_l1_' + tweetID, tweetID + '/Friends_l1_' + tweetID]:
@@ -99,9 +99,9 @@ def compute_id_dict_and_edges():
               id_dict[row[1]] = count 
               count += 1
             
-            edges.append((id_dict[row[0]], id_dict[row[1]]))
+            edges.add((id_dict[row[0]], id_dict[row[1]]))
 
-  return id_dict, edges
+  return id_dict, list(edges)
 
 def compute_id_dict_and_edges_from_ids_file():
   id_dict = dict()
